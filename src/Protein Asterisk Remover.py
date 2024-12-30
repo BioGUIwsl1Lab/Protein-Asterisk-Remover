@@ -24,7 +24,7 @@ def run_pipeline(input_file, progress_bar):
     try:
         subprocess.run(["wsl", "bash", "-c", command], check=True, creationflags=subprocess.CREATE_NO_WINDOW)
         progress_bar.stop()
-        messagebox.showinfo("Success","Asterisks removed from sequence")
+        messagebox.showinfo("Success","Asterisks removed from the sequence's end")
 
     except subprocess.CalledProcessError as e:
         progress_bar.stop()
